@@ -1,8 +1,8 @@
-import code
+import code_1
 
 # var call
-cmd = code.utils()
-ai = code.ai()
+cmd = code_1.utils()
+ai = code_1.ai()
 setting = ai.setting()
 
 # set up the setting
