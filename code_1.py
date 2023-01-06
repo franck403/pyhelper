@@ -11,11 +11,17 @@ bactive = False
 lprint = 0
 gcode = "none"
 gurl = "none"
-customdic =	{"desc": "Computing","range": 1000,"actual_range":1}
+customdic =	{"desc": "Computing","range": 1000,"actual_range":0}
 
 class bar():
     class custombar():
         class fonction():
+            def repeat(self, char, repeat):
+                repeated_string = char * repeat
+                splitd_strng = repeated_string.split()
+                separator = '-'
+                result = separator.join(splitd_strng)
+                return result
             def codeer(self,codename,code):
                 global customdic
                 customdic[codename] = code
@@ -25,6 +31,7 @@ class bar():
             def acrange(self):
                 global customdic
                 customdic["actual_range"] = bar.custombar.fonction.getrange(0) + 1
+                return customdic["actual_range"]
             def evrun(self,function_name):
                 global customdic
                 code_to_lauch = customdic[function_name]
