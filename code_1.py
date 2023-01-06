@@ -11,49 +11,58 @@ bactive = False
 lprint = 0
 gcode = "none"
 gurl = "none"
-customdic =	{"desc": "Computing","range": 1000,"actual_range":0}
+customdic = {"desc": "Computing", "range": 1000, "actual_range": 0}
+
 
 class bar():
     class custombar():
         class fonction():
+
             def repeat(self, char, repeat):
                 repeated_string = char * repeat
                 splitd_strng = repeated_string.split()
                 separator = '-'
                 result = separator.join(splitd_strng)
                 return result
-            def codeer(self,codename,code):
+            def rerange(self):
+                global customdic
+                return customdic["range"] - customdic["actual_range"]
+            def codeer(self, codename, code):
                 global customdic
                 customdic[codename] = code
+
             def getrange(self):
                 global customdic
                 return customdic["actual_range"]
+
             def acrange(self):
                 global customdic
-                customdic["actual_range"] = bar.custombar.fonction.getrange(0) + 1
+                customdic["actual_range"] = bar.custombar.fonction.getrange(
+                    0) + 1
                 return customdic["actual_range"]
-            def evrun(self,function_name):
+
+            def evrun(self, function_name):
                 global customdic
                 code_to_lauch = customdic[function_name]
                 eval(code_to_lauch)
-            def run(self,function_name):
+
+            def run(self, function_name):
                 global customdic
                 code_to_lauch = customdic[function_name]
                 exec(code_to_lauch)
-            def prepare(self,desc, range):
+
+            def prepare(self, desc, range):
                 global customdic
                 customdic["desc"] = desc
                 customdic["range"] = range
 
-        def getcode(self,url):
+        def getcode(self, url):
             import requests
             global gcode
             global gurl
             gurl = url
             code = requests.get(url)
             gcode = code.text
-
-        
 
     def rename(self, desc):
         global bardesc
@@ -95,7 +104,8 @@ class bar():
             global svrange
             bspace = bspace - 1
             nrange = nrange + 1
-            barrange = bar.repeat("", "#", svrange + 1) + bar.repeat("", "-", bspace)
+            barrange = bar.repeat("", "#", svrange + 1) + \
+                bar.repeat("", "-", bspace)
             svrange = svrange + 1
             global lprint
             if lprint == 1:
@@ -104,7 +114,8 @@ class bar():
                 sys.stdout.write('\x1b[2K')
             else:
                 pass
-            colors.Purple(bardesc + " : " + barrange + "| " + str(int(nrange)) + "/" + str(int(srange)))
+            colors.Purple(bardesc + " : " + barrange + "| " +
+                          str(int(nrange)) + "/" + str(int(srange)))
         else:
             quit(" You don't have definie the progress bar please add code.bar.start(desc,progress_bar_range)")
             import time
@@ -129,6 +140,7 @@ class bar():
             nrange = 0
         else:
             pass
+
 
 class utils():
 
@@ -172,7 +184,8 @@ class ai():
                 bypass = True
                 colors.Red(
                     "[AI Setting] The max recursion changing can create bug of lag please don't put a very big number")
-                colors.Red("[AI Setting] max recursion set to " + str(int(mxr)))
+                colors.Red(
+                    "[AI Setting] max recursion set to " + str(int(mxr)))
                 import sys
                 sys.setrecursionlimit(mxr)
             else:
@@ -270,7 +283,8 @@ class ai():
         import time
         time.sleep(1)
         if cs:
-            colors.Yellow("[AI service Worker] Thread " + str(int(tr)) + " is started")
+            colors.Yellow("[AI service Worker] Thread " +
+                          str(int(tr)) + " is started")
         else:
             pass
         while i == 1:
@@ -350,7 +364,8 @@ class ai():
             else:
                 f = f + 15
         if cs:
-            colors.Yellow("[AI Service Worker] Thread " + str(int(tr)) + " have finish")
+            colors.Yellow("[AI Service Worker] Thread " +
+                          str(int(tr)) + " have finish")
         else:
             pass
 
