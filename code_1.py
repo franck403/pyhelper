@@ -11,7 +11,7 @@ bactive = False
 lprint = 0
 gcode = "none"
 gurl = "none"
-customdic =	{"desc": "Computing","range": 1000}
+customdic =	{"desc": "Computing","range": 1000,"actual_range":1}
 
 class bar():
     class custombar():
@@ -19,10 +19,20 @@ class bar():
             def codeer(self,codename,code):
                 global customdic
                 customdic[codename] = code
-            def run(self,function_name):
+            def getrange(self):
+                global customdic
+                return customdic["actual_range"]
+            def acrange(self):
+                global customdic
+                customdic["actual_range"] = bar.custombar.fonction.getrange(0) + 1
+            def evrun(self,function_name):
                 global customdic
                 code_to_lauch = customdic[function_name]
                 eval(code_to_lauch)
+            def run(self,function_name):
+                global customdic
+                code_to_lauch = customdic[function_name]
+                exec(code_to_lauch)
             def prepare(self,desc, range):
                 global customdic
                 customdic["desc"] = desc

@@ -7,9 +7,12 @@ setting = ai.setting()
 
 # code to test
 cusbar = code_1.bar.custombar.fonction()
-
+cusbar.prepare("Teste",10)
+cusbar.codeer("advence","dictinary = {'acutal_range':'0'}")
 cusbar.codeer("start","print('hi')")
+cusbar.codeer("next","import code_1\ndic = code_1.bar.custombar.fonction()\ndic.acrange()\nprint('hi 2')\n")
 cusbar.run("start")
+cusbar.run("next")
 quit()
 
 # set up the setting
