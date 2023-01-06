@@ -11,7 +11,7 @@ bactive = False
 lprint = 0
 gcode = "none"
 gurl = "none"
-customdic =	{"desc": "Computing","range": 1000,"next": "command here", "start":"command here"}
+customdic =	{"desc": "Computing","range": 1000}
 
 class bar():
     class custombar():
@@ -32,21 +32,10 @@ class bar():
             code = requests.get(url)
             gcode = code.text
 
-        def start(self, start_code_name,desc, range):
-            global lprint
-            global bardesc
-            global barrange
-            global srange
-            global nrange
-            global bspace
-            global bactive
-            lprint = 1
-            bactive = True
-            bspace = range
-            srange = range
-            barrange = "#"
-            bardesc = desc
-
+        def prepare(self,desc, range):
+            global customdic
+            customdic["desc"] = desc
+            customdic["range"] = range
 
     def rename(self, desc):
         global bardesc
