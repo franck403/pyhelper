@@ -7,20 +7,20 @@
       #  else:
        #     pass
 
-#    def start(self, desc, range):
- #       global lprint
-  #      global bardesc
-   #     global barrange
-    #    global srange
-     #   global nrange
-      #  global bspace
-       # global bactive
-        #lprint = 1
-#        bactive = True
- #       bspace = range
-  #      srange = range
-   #     barrange = "#"
-    #    bardesc = desc
+def start(self, desc, range):
+        global lprint
+        global bardesc
+        global barrange
+        global srange
+        global nrange
+        global bspace
+        global bactive
+        lprint = 1
+        bactive = True
+        bspace = range
+        srange = range
+        barrange = "#"
+        bardesc = desc
 
 #    def repeat(self, char, repeat):
  #       repeated_string = char * repeat

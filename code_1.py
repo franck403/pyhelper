@@ -15,9 +15,14 @@ gurl = "none"
 class bar():
     class custombar():
         class fonction():
-            def define(self,code,linestart,linemax):
+            def run(self,function_name):
                 global gcode
-                fonctioncode = gcode.find(code[1])
+                colors.Green("[Custom Progress Bar] Searching the function")
+                fonctioncode = gcode.find(function_name)
+
+            def define(self,name,linestart,linemax):
+                global gcode
+                fonctioncode = gcode.find(name)
                 if fonctioncode == -1:
                     colors.Red("[Custom Progress Bar] The function was not found")
                 else:
@@ -25,6 +30,7 @@ class bar():
                     global fun
                     colors.Green("Running Python code...")
                     fun = gcode[linestart:linemax]
+                    print(fun)
                     eval(fun)
                     colors.Green("[Custom Progress Bar] Finish")
 
