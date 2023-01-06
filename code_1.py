@@ -15,7 +15,7 @@ gurl = "none"
 class bar():
     class custombar():
         class fonction():
-            def run(self,code,linestart,linemax):
+            def define(self,code,linestart,linemax):
                 global gcode
                 fonctioncode = gcode.find(code[1])
                 if fonctioncode == -1:
