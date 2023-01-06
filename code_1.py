@@ -20,10 +20,9 @@ class bar():
                 global customdic
                 customdic[codename] = code
             def run(self,function_name):
-                global gcode
-                colors.Green("[Custom Progress Bar] Searching the function")
-                fonctioncode = gcode.find(function_name)
-                exec(fonctioncode)
+                global customdic
+                code_to_lauch = customdic[function_name]
+                eval(code_to_lauch)
             def define(self,name,linestart,linemax):
                 global gcode
                 fonctioncode = gcode.find(name)
