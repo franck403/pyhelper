@@ -23,30 +23,16 @@ class bar():
                 global customdic
                 code_to_lauch = customdic[function_name]
                 eval(code_to_lauch)
-            def define(self,name,linestart,linemax):
-                global gcode
-                fonctioncode = gcode.find(name)
-                if fonctioncode == -1:
-                    colors.Red("[Custom Progress Bar] The function was not found")
-                else:
-                    colors.Green("[Custom Progress Bar] Generating function")
-                    global fun
-                    colors.Green("Running Python code...")
-                    fun = gcode[linestart:linemax]
-                    print(fun)
-                    eval(fun)
-                    colors.Green("[Custom Progress Bar] Finish")
 
         def getcode(self,url):
             import requests
             global gcode
             global gurl
             gurl = url
-            colors.Green("[Custom Progress Bar] Getting the url content...")
             code = requests.get(url)
             gcode = code.text
 
-        def start(self, desc, range):
+        def start(self, start_code_name,desc, range):
             global lprint
             global bardesc
             global barrange
