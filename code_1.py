@@ -24,9 +24,15 @@ class bar():
                 separator = '-'
                 result = separator.join(splitd_strng)
                 return result
+
+            def getsrange(self):
+                global customdic
+                return customdic["range"]
+
             def rerange(self):
                 global customdic
                 return customdic["range"] - customdic["actual_range"]
+
             def codeer(self, codename, code):
                 global customdic
                 customdic[codename] = code

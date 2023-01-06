@@ -11,10 +11,9 @@ cusbar.prepare("Teste",10)
 cusbar.codeer("wait","import time\ntime.sleep(0.1)")
 cusbar.codeer("start","print('hi')")
 cusbar.codeer("next","import code_1\ndic = code_1.bar.custombar.fonction()\nprint('|' + dic.repeat('#',dic.acrange()) + dic.repeat('-',dic.rerange()) + '|')\n")
+cusbar.codeer("loop","import code_1\ndic = code_1.bar.custombar.fonction()\ncusbar = code_1.bar.custombar.fonction()\nloop_range = dic.getsrange()\nfor i in range(loop_range):\n   cusbar.run('next')\n    cusbar.run('wait')")
 cusbar.run("start")
-cusbar.run("next")
-cusbar.run("next")
-cusbar.run("next")
+cusbar.run("loop")
 quit()
 
 # set up the setting
