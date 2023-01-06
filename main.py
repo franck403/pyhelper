@@ -7,6 +7,7 @@ setting = ai.setting()
 
 # code to test
 cusbar = code_1.bar.custombar.fonction()
+
 cusbar.codeer("start","print('hi')")
 cusbar.run("start")
 quit()

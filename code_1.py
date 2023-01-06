@@ -23,6 +23,10 @@ class bar():
                 global customdic
                 code_to_lauch = customdic[function_name]
                 eval(code_to_lauch)
+            def prepare(self,desc, range):
+                global customdic
+                customdic["desc"] = desc
+                customdic["range"] = range
 
         def getcode(self,url):
             import requests
@@ -32,10 +36,7 @@ class bar():
             code = requests.get(url)
             gcode = code.text
 
-        def prepare(self,desc, range):
-            global customdic
-            customdic["desc"] = desc
-            customdic["range"] = range
+        
 
     def rename(self, desc):
         global bardesc
