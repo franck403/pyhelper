@@ -5,6 +5,12 @@ cmd = code_1.utils()
 ai = code_1.ai()
 setting = ai.setting()
 
+# code to test
+cusbar = code_1.bar.custombar.fonction()
+cusbar.codeer("start","print('hi')")
+cusbar.run("start")
+quit()
+
 # set up the setting
 setting.log(False)
 setting.optimise(True)
