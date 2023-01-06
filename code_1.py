@@ -11,10 +11,14 @@ bactive = False
 lprint = 0
 gcode = "none"
 gurl = "none"
+customdic =	{"desc": "Computing","range": 1000,"next": "command here", "start":"command here"}
 
 class bar():
     class custombar():
         class fonction():
+            def codeer(self,codename,code):
+                global customdic
+                customdic[codename] = code
             def run(self,function_name):
                 global gcode
                 colors.Green("[Custom Progress Bar] Searching the function")
