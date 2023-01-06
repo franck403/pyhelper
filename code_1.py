@@ -19,7 +19,7 @@ class bar():
                 global gcode
                 colors.Green("[Custom Progress Bar] Searching the function")
                 fonctioncode = gcode.find(function_name)
-
+                exec(fonctioncode)
             def define(self,name,linestart,linemax):
                 global gcode
                 fonctioncode = gcode.find(name)
