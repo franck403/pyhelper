@@ -12,7 +12,30 @@ lprint = 0
 gcode = "none"
 gurl = "none"
 customdic = {"desc": "Computing", "range": 1000, "actual_range": 0}
+customcode = {"desc":"Computing"}
 
+class coder():
+    def code(self,code_name,code):
+        global customcode
+        customcode[code_name] = code
+    def run(self,code_name,method="exec"):
+        global customcode
+        if method == "exec":
+            try:
+                exec(customcode[code_name]) 
+            except:
+                colors.Red("The code name does not exist or a error is in the code")
+                quit()
+        elif method == "eval":
+            global customcode
+            try:
+                eval(customcode[code_name])
+            except:
+                colors.Red("The code name does not exist or a error is in the code")
+                quit()
+        else:
+            colors.Red("The methods is inccoret. They are exec or eval")
+            quit()
 
 class bar():
     class custombar():
