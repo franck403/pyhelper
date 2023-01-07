@@ -4,11 +4,11 @@ import code_1
 cmd = code_1.utils()
 ai = code_1.ai()
 setting = ai.setting()
-prop = code_1.coder()
+#prop = code_1.coder()
 
 
-prop.code("runner","import code_1\npr = code_1.color()\npr.Green('Hi and good morning')")
-prop.run("runner")
+#prop.code("runner","import code_1\npr = code_1.color()\npr.Green('Hi and good morning')")
+#prop.run("runner")
 
 
 # code to delete # but its working
