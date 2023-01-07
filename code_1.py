@@ -1,3 +1,4 @@
+import db.py
 console = False
 consolek = False
 bypass = False
@@ -273,7 +274,7 @@ class ai():
         import importlib
         from time import sleep
         open("result.py", "a").write(
-            "def ready():\n  import code\n  color = code.color()\n  final = d1")
+            "def ready():\n  import code_1\n  color = code_1.color()\n  final = d1")
         from tqdm import tqdm
         st = tr - 1
         sd = tr
