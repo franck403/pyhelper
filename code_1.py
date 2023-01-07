@@ -27,7 +27,6 @@ class coder():
                 colors.Red("The code name does not exist or a error is in the code")
                 quit()
         elif method == "eval":
-            global customcode
             try:
                 eval(customcode[code_name])
             except:
