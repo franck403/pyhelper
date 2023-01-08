@@ -1,11 +1,14 @@
 class db():
     def __init__(self):
         import pymongo
+        import pymongo
+
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
         dblist = myclient.list_database_names()
         if "database" in dblist:
             pass
         else:
-            myclient = pymongo.MongoClient("mongodb://localhost:27017/")
             mydb = myclient["database"]
     def search(self):
         print("hi")

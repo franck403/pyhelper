@@ -5,7 +5,12 @@ cmd = code_1.utils()
 ai = code_1.ai()
 setting = ai.setting()
 #prop = code_1.coder()
+db = code_1.db.db()
 
+db.collection("Teste")
+db.new_element("Teste","Teste1","This is the first db test")
+
+quit()
 
 #prop.code("runner","import code_1\npr = code_1.color()\npr.Green('Hi and good morning')")
 #prop.run("runner")

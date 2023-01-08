@@ -1,4 +1,4 @@
-import db.py
+import db
 console = False
 consolek = False
 bypass = False
