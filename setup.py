@@ -8,5 +8,5 @@ setup(name='Ctse',
       long_description='For help with progress bar. You can print in colors to :)',
       author='Geoloup Team',
       author_email='franckiebbb@gmail.com',
-      packages=['code_1'],
+      packages=['pyhelper'],
 )
